@@ -4,6 +4,6 @@ class JumpersController < ApplicationController
   end
 
   def show
-    @jumper = Jumper.find(params[:id])
+    @jumper = Jumper.find(params[:id]).decorate
   end
 end

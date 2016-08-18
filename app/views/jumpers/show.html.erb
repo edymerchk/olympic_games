@@ -3,28 +3,14 @@
 </div>
 <div>
   <span>Distance:</span>
-  <% if @jumper.distance.present? %>
-    <%= @jumper.distance %>
-    <% if @jumper.valid_jump %>
-      <%= image_tag('good.png') %>
-    <% else %>
-      <%= image_tag('bad.png') %>
-    <% end %>
-  <% else %>
-     Waiting..
-    <%= image_tag('waiting.png') %>
-  <% end %>
+  <%= @jumper.distance_string %>
+  <%= @jumper.jump_image %>
 </div>
 <div>
-  <span>Finished? :</span> <%= @jumper.distance.present? ? "Yes" : "No" %>
+  <span>Finished? :</span> <%= @jumper.finished %>
 </div>
 <div>
-  <span>Reviewed at :</span>
-  <% if @jumper.reviewed_at.present? %>
-    <%= @jumper.reviewed_at.strftime("%B %e, %Y") %>
-  <% else %>
-    No Reviewed yet
-  <% end %>
+  <span>Reviewed at :</span> <%= @jumper.reviewed_at_string %>
 </div>
 
 

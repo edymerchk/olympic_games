@@ -1,0 +1,2 @@
+class Jumper < ApplicationRecord
+end

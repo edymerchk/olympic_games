@@ -1,0 +1,7 @@
+<h1>Jumpers</h1>
+
+<ul>
+<% @jumpers.each do |jumper| %>
+  <li> <%= link_to jumper.name, jumper %> </li>
+<% end %>
+</ul>
